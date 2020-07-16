@@ -1,0 +1,4 @@
+1. The value of i is: 6
+
+2. jyix 
+(because j & y are the columns of the array so accessing them first would be slower for row major memory) 

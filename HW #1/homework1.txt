@@ -1,0 +1,26 @@
+Erica Xie
+4/13/18
+
+2.71 
+a) The code does not use sign extension when extracting the byte and putting into a 32-bit unsigned. 
+
+b) 
+int xbyte(packed_t word, int bytenum)
+{
+  int newShift = 3 - bytenum << 3; ///get the right number 
+  int newByte = word << shift; //cast to int for arthmetic right shift
+  return newByte >> 24; //sign extension (move the byte to the end)  
+}
+
+
+
+2.82
+a) No, since the values are signed when x = TMin and y = TMin + 1 (x < y) is true but -x would be smaller than -y. 
+b) Yes, (x + y) << 4 is (x << 4) + (y << 4) which is the same as 16*x + 16*y and then +y would give 16*x + 17*y and -x would give the final answer of 15*x + 17*y.
+c) Yes, ~(x + y) + ~x + ~y = -1 and by shifting the identity around you get the orginal expression. 
+d) Yes, casting doesn't change things at the bit level so -(unsigned)(y-x) can be (unsigned)(x-y) which is the same as (ux - uy). 
+e) Yes, the right shift throws away the right two bits so when the left shift happens shifts back but the two bits are lost so it can never be more than the orginal value of x (even though it could be the same if the bits thrown away were zeros). 
+
+
+
+

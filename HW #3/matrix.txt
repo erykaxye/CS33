@@ -1,0 +1,19 @@
+void transpose(int *dst, int *src, int dim)
+{
+ int sect = 8;
+
+ for(int i = 0; i < dim; i += sect)
+  for(int j = 0; j < dim; j += sect) 
+    for(int ik = i; (ni < i + sect) && (ni < dim); ni++)
+      for(int jk = j; (nj < j + sect) && (nj < dim); nj++) 
+   	dst[nj*dim + ni] = src[ni*dim + nj]; 
+} 
+
+og: 
+void transpose(int *dst, int *src, int dim)
+{
+ int i, j;
+ for (i = O; i < dim; i++)
+  for (j = O; j < dim; j++)
+   dst[j*dim + i] = src[i*dim + j]; 
+}
